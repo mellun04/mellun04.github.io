@@ -5,7 +5,7 @@
         console.log('Form submitted!');
         if(firstName && lastName && displayName && email && password){ submitted = true }
     }
-    let firstName = ""
+    let firstName=""
     let lastName = ""
     let displayName = ""
     let email = ""
@@ -18,21 +18,36 @@
 <form action="" on:submit|preventDefault={handleSubmit}>
 
     <div class="questions">
+
+        <label for="firstName">First name:
+            {#if !firstName} <span class="required">*</span>  {/if}
+        </label>
+        <input id="firstName" type="text" bind:value={firstName}/>
+        <p></p>
         
-        <label for="firstName">First name:</label>
-        <input id="firstName" type="test" bind:value={firstName}/>
-        
-        <label for="lastName">Last name:</label>
+        <label for="lastName">Last name:
+            {#if !lastName} <span class="required">*</span>  {/if}
+        </label>
         <input id="lastName" type="text" bind:value={lastName}/>
+        <p></p>
         
-        <label for="displayName">Display name:</label>
+        <label for="displayName">Display name:
+            {#if !displayName} <span class="required">*</span>  {/if}
+        </label>
         <input id="displayName" type="text" bind:value={displayName}/>
+        <p></p>
         
-        <label for="email">Email:</label>
+        <label for="email">Email:
+            {#if !email} <span class="required">*</span>  {/if}
+        </label>
         <input id="email" type="email" bind:value={email}/>
-        
-        <label for="password">Password:</label>
+        <p></p>
+
+        <label for="password">Password:
+            {#if !password} <span class="required">*</span>  {/if}
+        </label>
         <input id="password" type="password" bind:value={password}/>
+        <p></p>
     
     </div>
 
@@ -62,7 +77,7 @@
     }
     .questions{
         display: grid;
-        grid-template-columns: repeat(2,minmax(300px,1fr));
+        grid-template-columns: repeat(1,minmax(300px,1fr));
     }
     #submitted{
         display: grid;
@@ -73,6 +88,9 @@
     }
     .text{
         margin: 5px;
+    }
+    .required{
+        color:red
     }
     .holder{
         display: flex;
