@@ -137,13 +137,14 @@
     grid-template-rows: repeat(3, 100px);
   }
 
-  @media (max-width:900px){
+  @media (max-width:800px){
     .row{
       grid-template-columns: repeat(4, 100px);
+      grid-template-rows: repeat(5, 100px);
     }
   }
 
-  @media (max-width:700px){
+  @media (max-width:500px){
     .row{
       grid-template-columns: repeat(3, 100px);
       grid-template-rows: repeat(6, 100px);
