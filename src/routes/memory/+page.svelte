@@ -81,11 +81,14 @@
   on:click={()=>{turn=!turn}} on:keypress={()=>{turn=!turn}}> </div>
   <div class="box" id="reset-box" on:click={()=>{reset()}} on:keypress={()=>{reset()}}><p>RESET</p></div>
 </main>
+<div style="height: 120px"></div>
 
 <style>
   h1{
     text-align: center;
     text-shadow:  0px 3px 2px grey;
+    margin-bottom: -30px;
+    margin-top: 5px;
   }
 
   .box{
