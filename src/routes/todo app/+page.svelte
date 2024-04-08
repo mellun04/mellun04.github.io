@@ -12,31 +12,31 @@ let complete = ["goodbye"]
     
     <label for="input">Add new </label>
     <input id="input" type="text" bind:value={input}/>
-    <button on:click={()=>{uncomplete.push(input); uncomplete =uncomplete}}> Add </button>
+    <button on:click={()=>{if(input){uncomplete.push(input)}; uncomplete =uncomplete}}> Add </button>
     
 
     <div class="layout">
         <div>
             <h1>NEW</h1>
-            <ul>
+            <ol>
                 {#each uncomplete as obj, i}
                     <div class="list_obj">
                         <li> {obj} </li>
                         <button on:click={()=>{complete.push(uncomplete.splice(i,1)); complete=complete; uncomplete=uncomplete}}> Done! </button>
                     </div>
                 {/each}
-            </ul>
+            </ol>
         </div>
         <div>
             <h1>COMPLETED</h1>
-            <ul>
+            <ol>
                 {#each complete as obj, i}
                     <div class="list_obj">
                         <li> {obj} </li>
                         <button on:click={()=>{complete.splice(i,1); complete=complete}}> Delete </button>
                     </div>
                 {/each}
-            </ul>
+            </ol>
         </div>
     </div>
 
@@ -64,6 +64,18 @@ let complete = ["goodbye"]
         display:flex;
         gap:5px;
         flex-direction:row;
+        padding: 2px
+    }
+    input{
+        background-color:rgb(200, 200, 200);
+        transition: border-color 0.5s, background-color 0.5s;
+    }
+    input:focus{
+        background-color:white;
+        border-color:black;
+    }
+    button:hover{
+        background-color: rgb(200, 200, 200);
     }
 
 
