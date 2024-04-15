@@ -7,7 +7,7 @@ import { writable } from "svelte/store";
 
    Read about localStorage here: 
    https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-   
+    
 */
 
 /* initialize the story_id to '1' if the story_id has not already been stored */
@@ -20,6 +20,18 @@ if (browser) {
         story_id_store.subscribe((value) => {
                 /* on changes to the story_id_store, update the localStorage in the browser. */
                 window?.localStorage.setItem('story_id', value);
+                console.log(value)
+        })
+}
+
+
+
+const chat = browser ? window?.localStorage.getItem('chat') ?? "" : ""
+export const chat_store = writable(chat)
+
+if (browser) {
+        chat_store.subscribe((value) => {
+                window?.localStorage.setItem('chat', value);
                 console.log(value)
         })
 }

@@ -4,7 +4,7 @@
   let red = 0
   let blue = 0
   let turn = true
-  let ids = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9]
+  let ids = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8]
   const imgs = ["https://picsum.photos/id/70/367/267", "https://picsum.photos/id/88/367/267","https://picsum.photos/id/93/367/267", "/notrick.gif", "https://ichef.bbci.co.uk/news/976/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLKkXl23RaUvFNOxUFZRcpSMeptNEDHIqhWrRx7XS8yw&s", "https://www.cuponline.se/graphics/cup/teamphoto/79471-800px.jpg", "https://preview.redd.it/request-for-the-gigachad-v0-1asd8y2wid0b1.jpg?width=640&crop=smart&auto=webp&s=eeeb5f5d3aebaf465668a87d6b785b02d5d8bd52", "https://upload.wikimedia.org/wikipedia/commons/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg"]
 
   let cards = [];
